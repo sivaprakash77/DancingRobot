@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url('https://images.unsplash.com/photo-1616712134411-6b6ae89bc3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60');
+
+}
+
+.robot-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    animation-name: robot;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+}
+
+
+
+.robot-head{
+    width: 8rem;
+    position: relative;
+    height:5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    text-align: center;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+
+
+p{
+    position: absolute;
+    right: -14rem;
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    
+    border: 1px solid rgb(240, 222, 222);
+    border-radius: 3rem;
+}
+.robot-body{
+    width: 8rem;
+    height: 10rem;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid black;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    position: relative;
+}
+.robot-leg{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.eyes {
+    
+    background-color: black;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    gap: 1rem;
+   
+}
+
+.eyes div{
+  
+    width: 15px;
+    height: 15px;
+    border-radius: 3rem;
+    background-color: rgb(40, 146, 194);
+    animation-name: eye;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.lhand{
+    position: absolute;
+    left: -2rem;
+    width: 1.5rem;
+    height: 6rem;
+    border-radius: 2rem;
+    background-color: aliceblue;
+    transform:rotate(20deg);
+    box-shadow:-20px 20px 40px  rgb(40, 146, 194) ;
+
+
+}
+
+.rhand{
+    position: absolute;
+    right: -2rem;
+    width: 1.5rem;
+    height: 6rem;
+    border-radius: 2rem;
+    background-color: aliceblue;
+    transform:rotate(-20deg);
+    box-shadow:20px 20px 40px  rgb(40, 146, 194) ;
+
+
+ }
+  
+  @keyframes eye {
+    from {background-color: rgb(0, 0, 0);}
+    to {background-color: rgb(40, 146, 194);}
+  }
+  @keyframes robot {
+    0% 
+    {
+        transform: translateX(20px);
+    }
+    25%  {
+        transform: translateY(20px);
+  }
+    50%  {
+        transform: translateY(-20px);
+
+  }
+    75%  {
+        transform: translateX(-20px);
+
+  }
+   90%  {
+        transform: translateY(-20px);
+
+  }
+   100%  {
+        transform: translateY(20px);
+
+  }
+}
